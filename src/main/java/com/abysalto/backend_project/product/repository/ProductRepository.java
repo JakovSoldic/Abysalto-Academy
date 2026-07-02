@@ -18,8 +18,3 @@ public interface ProductRepository extends JpaRepository<Product, Long>{
     List<Product> findByCategoryAndPrice(String category, BigDecimal price);
     
 }
-
-
-//public interface ProductRepository extends JpaRepository<Product, Long>,
-//        JpaSpecificationExecutor<Product> {
-//}

@@ -3,7 +3,9 @@ package com.abysalto.backend_project.mapper;
 import com.abysalto.backend_project.product.dto.ProductDetailDTO;
 import com.abysalto.backend_project.product.dto.ProductListDTO;
 import com.abysalto.backend_project.product.entity.Product;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ProductMapper {
     
     public ProductListDTO toListDTO(Product product) {
@@ -11,7 +13,8 @@ public class ProductMapper {
         dto.setThumbnail(product.getThumbnail());
         dto.setTitle(product.getTitle());
         dto.setPrice(product.getPrice());
-        dto.setShortDescription(product.getDescription().substring(0, 100));
+        String description = product.getDescription();
+        dto.setShortDescription(description.length() > 100 ? description.substring(0, 100) : description);
         return dto;
     }
     
