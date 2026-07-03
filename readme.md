@@ -52,7 +52,7 @@ Application uses JWT authentication.
 Credentials are DummyJSON users: https://dummyjson.com/users
 
 ### Get token
-POST http://localhost:8080/auth/login
+POST http://localhost:8080/auth/login<br>
 {<br>
   "username": "emilys",<br>
   "password": "emilyspass"<br>
