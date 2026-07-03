@@ -37,7 +37,7 @@ public class ProductService {
         }));
     }
     
-    @Cacheable(value = "products-filter", key = "#category + '-' + #price")
+    @Cacheable(value = "products-filter")
     public List<ProductListDTO> filterProducts(String category,
                                                BigDecimal price) {
         
