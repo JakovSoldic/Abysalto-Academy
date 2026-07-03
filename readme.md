@@ -41,8 +41,8 @@ Middleware REST API for fetching and displaying products from multiple data sour
 - Maven
 
 ### Run locally
-git clone <url>
-cd backend-project
+git clone <url><br>
+cd backend-project<br>
 mvn spring-boot:run
 
 Application runs on: http://localhost:8080
